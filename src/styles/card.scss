@@ -10,9 +10,17 @@
   flex-direction: column;
 
   &__photo {
-    width: 160px;
-    height: 134px;
-    margin: 30px 19px;
+    width: 160px + 8px;
+    height: 134px + 28px;
+    margin: 16px auto;
+    border: 3px solid transparent;
+    padding: 11px 1px;
+
+    &:hover {
+      border-color: #f3f3f3;
+      transform: scale(1.2);
+      transition: transform 1s;
+    }
   }
 
   &__content {
@@ -63,6 +71,9 @@
     line-height: 16px;
     text-decoration: none;
     text-transform: uppercase;
+
+    transition: background-color 0.5s, color 0.5s;
+    transition-timing-function: ease;
 
     &:hover {
       background-color: transparent;
