@@ -1,9 +1,11 @@
 .catalog {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, $card-width);
-  max-width: 4 * $card-width + 4 * $catalog-gap;
-  margin: 50px auto;
-  gap: $catalog-gap;
-  row-gap: 50px;
+
+  &__container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, $card-width);
+    max-width: 4 * $card-width + 4 * $catalog-gap-column;
+    margin: 50px auto;
+    gap: $catalog-gap-row $catalog-gap-column;
+  }
 }
