@@ -8,9 +8,20 @@
   border-radius: 5px;
 
   &__photo {
-    width: 160px;
-    height: 134px;
-    margin: 30px 19px;
+    width: 160px + 8px;
+    height: 134px + 28px;
+    margin: 16px auto;
+    padding: 11px 1px;
+
+    border: 3px solid transparent;
+
+    transition: transform 1s;
+
+    &:hover {
+      border-color: #f3f3f3;
+
+      transform: scale(1.2);
+    }
   }
 
   &__content {
@@ -61,6 +72,8 @@
     border-radius: 5px;
     background-color: $accent-color;
 
+    transition: background-color 0.5s, color 0.5s;
+
     &:hover {
       color: $accent-color;
       background-color: transparent;
@@ -76,6 +89,8 @@
   }
 
   &__price-label {
+    display: flex;
+    align-items: center;
     margin: 0;
 
     font-weight: normal;
